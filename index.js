@@ -55,13 +55,12 @@ const sendVerificationEmail = async (email, verificationToken) => {
   } catch (error) {
     console.error("Error sending verification email:", error);
   }
+};
+//test the api in production
 
-  //test the api in production
-
-  app.get("/",(req,res)=>{
-    res.status(200).json({message:"hello test"})
-  })
-
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "hello test" });
+});
 
 //end point to register
 
